@@ -14,19 +14,19 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
 @RestController
-@RequestMapping("/first-service")
+//@RequestMapping("/first-service")
 public class FirstServiceController {
 
-    @GetMapping("/welcome")
+    @GetMapping("/first/welcome")
     public String welcome() {
         log.info("test1111");
         return "Welcome to the First service.";
     }
 
-    @GetMapping("/message")
+    @GetMapping("/first/message")
     public String message(@RequestHeader("first-request") String header) {
         log.info(header);
-        return "Welcome to the first service.";
+        return "Welcome to the first Message service.";
     }
 
 
